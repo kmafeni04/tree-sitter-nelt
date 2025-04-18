@@ -1,0 +1,8 @@
+{# local nelt = require "path.to.nelt" #}
+{# local function test(tp: *nelt.Template, str: string) #}
+  {{ "<escaped val>" }}
+  text
+  {{ str }}
+  {{- "<unescaped val>" }}
+{# end #}
+{# return test #}
