@@ -11,7 +11,7 @@ module.exports = grammar({
   name: "nelt",
 
   rules: {
-    template: ($) => repeat(choice($.nelt_tags, $.content)),
+    template: ($) => repeat(choice($.nelt_tags, $.content, $.nelt_comment)),
 
     content: () => prec.right(repeat1(choice(/[^\{]/, /\{[^\#\%]/, "#", "# "))),
 
@@ -25,5 +25,8 @@ module.exports = grammar({
         seq("{{", alias(repeat(choice(/[^}]+/, "}")), $.expr), "}}"),
         seq("{{-", alias(repeat(choice(/[^}]+/, "}")), $.expr), "}}"),
       ),
+
+    nelt_comment: ($) =>
+      seq("{[", alias(repeat(choice(/[^\]]+/, "]")), $.comment), "]}"),
   },
 });

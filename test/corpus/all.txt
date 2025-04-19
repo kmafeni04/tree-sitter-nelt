@@ -1,6 +1,7 @@
 =========
 all
 =========
+{[ a comment ]}
 {# local nelt = require "path.to.nelt" #}
 {# local function test(tp: *nelt.Template, str: string) #}
   {{ "<escaped val>" }}
@@ -14,6 +15,9 @@ all
 ---
 
 (template
+  (nelt_comment
+    (comment))
+  (content)
   (nelt_tags
     (nelt_expr
       (expr)))
