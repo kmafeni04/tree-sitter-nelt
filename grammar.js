@@ -18,7 +18,7 @@ module.exports = grammar({
     nelt_tags: ($) => choice($.nelt_expr, $.nelt_val),
 
     nelt_expr: ($) =>
-      seq("{#", alias(repeat(choice(/[^#]+/, "#")), $.expr), "#}"),
+      seq("{%", alias(repeat(choice(/[^%]+/, "%")), $.expr), "%}"),
 
     nelt_val: ($) =>
       choice(
@@ -27,6 +27,6 @@ module.exports = grammar({
       ),
 
     nelt_comment: ($) =>
-      seq("{[", alias(repeat(choice(/[^\]]+/, "]")), $.comment), "]}"),
+      seq("{#", alias(repeat(choice(/[^#]+/, "#")), $.comment), "#}"),
   },
 });

@@ -1,9 +1,10 @@
-{[ a comment ]}
-{# local nelt = require "path.to.nelt" #}
-{# local function test(tp: *nelt.Template, str: string) #}
+{# a comment #}
+{% local nelt = require "path.to.nelt" %}
+{% local function test(tp: *nelt.Template, str: string) %}
   {{ "<escaped val>" }}
   text
+  <h1>hello world</h1>
   {{ str }}
   {{- "<unescaped val>" }}
-{# end #}
-{# return test #}
+{% end %}
+{% return test %}
