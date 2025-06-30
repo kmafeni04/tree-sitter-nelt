@@ -72,7 +72,7 @@
       "required": false,
       "types": [
         {
-          "type": "expr",
+          "type": "val",
           "named": true
         }
       ]
@@ -101,6 +101,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "val",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "#",

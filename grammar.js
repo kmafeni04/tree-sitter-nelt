@@ -22,8 +22,8 @@ module.exports = grammar({
 
     nelt_val: ($) =>
       choice(
-        seq("{{", alias(repeat(choice(/[^}]+/, "}")), $.expr), "}}"),
-        seq("{{-", alias(repeat(choice(/[^}]+/, "}")), $.expr), "}}"),
+        seq("{{", alias(repeat(choice(/[^}]+/, "}")), $.val), "}}"),
+        seq("{{-", alias(repeat(choice(/[^}]+/, "}")), $.val), "}}"),
       ),
 
     nelt_comment: ($) =>
