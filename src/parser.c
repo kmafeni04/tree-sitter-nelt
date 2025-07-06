@@ -47,8 +47,8 @@ enum ts_symbol_identifiers {
   aux_sym_nelt_expr_repeat1 = 25,
   aux_sym_nelt_val_repeat1 = 26,
   aux_sym_nelt_comment_repeat1 = 27,
-  alias_sym_comment = 28,
-  alias_sym_expr = 29,
+  alias_sym_expr = 28,
+  alias_sym_nelt_comment_body = 29,
   alias_sym_val = 30,
 };
 
@@ -81,8 +81,8 @@ static const char * const ts_symbol_names[] = {
   [aux_sym_nelt_expr_repeat1] = "nelt_expr_repeat1",
   [aux_sym_nelt_val_repeat1] = "nelt_val_repeat1",
   [aux_sym_nelt_comment_repeat1] = "nelt_comment_repeat1",
-  [alias_sym_comment] = "comment",
   [alias_sym_expr] = "expr",
+  [alias_sym_nelt_comment_body] = "nelt_comment_body",
   [alias_sym_val] = "val",
 };
 
@@ -115,8 +115,8 @@ static const TSSymbol ts_symbol_map[] = {
   [aux_sym_nelt_expr_repeat1] = aux_sym_nelt_expr_repeat1,
   [aux_sym_nelt_val_repeat1] = aux_sym_nelt_val_repeat1,
   [aux_sym_nelt_comment_repeat1] = aux_sym_nelt_comment_repeat1,
-  [alias_sym_comment] = alias_sym_comment,
   [alias_sym_expr] = alias_sym_expr,
+  [alias_sym_nelt_comment_body] = alias_sym_nelt_comment_body,
   [alias_sym_val] = alias_sym_val,
 };
 
@@ -233,11 +233,11 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = false,
   },
-  [alias_sym_comment] = {
+  [alias_sym_expr] = {
     .visible = true,
     .named = true,
   },
-  [alias_sym_expr] = {
+  [alias_sym_nelt_comment_body] = {
     .visible = true,
     .named = true,
   },
@@ -256,7 +256,7 @@ static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE
     [1] = alias_sym_val,
   },
   [3] = {
-    [1] = alias_sym_comment,
+    [1] = alias_sym_nelt_comment_body,
   },
 };
 
@@ -269,7 +269,7 @@ static const uint16_t ts_non_terminal_alias_map[] = {
     alias_sym_val,
   aux_sym_nelt_comment_repeat1, 2,
     aux_sym_nelt_comment_repeat1,
-    alias_sym_comment,
+    alias_sym_nelt_comment_body,
   0,
 };
 

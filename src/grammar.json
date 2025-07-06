@@ -196,7 +196,7 @@
             }
           },
           "named": true,
-          "value": "comment"
+          "value": "nelt_comment_body"
         },
         {
           "type": "STRING",

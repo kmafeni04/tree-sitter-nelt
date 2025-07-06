@@ -27,6 +27,6 @@ module.exports = grammar({
       ),
 
     nelt_comment: ($) =>
-      seq("{#", alias(repeat(choice(/[^#]+/, "#")), $.comment), "#}"),
+      seq("{#", alias(repeat(choice(/[^#]+/, "#")), $.nelt_comment_body), "#}"),
   },
 });
