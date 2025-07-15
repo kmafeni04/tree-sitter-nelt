@@ -16,7 +16,7 @@ all
 
 (template
   (nelt_comment
-    (comment))
+    (nelt_comment_body))
   (content)
   (nelt_tags
     (nelt_expr
@@ -28,15 +28,15 @@ all
   (content)
   (nelt_tags
     (nelt_val
-      (expr)))
+      (val)))
   (content)
   (nelt_tags
     (nelt_val
-      (expr)))
+      (val)))
   (content)
   (nelt_tags
     (nelt_val
-      (expr)))
+      (val)))
   (content)
   (nelt_tags
     (nelt_expr

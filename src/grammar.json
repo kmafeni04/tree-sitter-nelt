@@ -75,17 +75,8 @@
           "content": {
             "type": "REPEAT",
             "content": {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "PATTERN",
-                  "value": "[^%]+"
-                },
-                {
-                  "type": "STRING",
-                  "value": "%"
-                }
-              ]
+              "type": "PATTERN",
+              "value": "."
             }
           },
           "named": true,
@@ -112,17 +103,8 @@
               "content": {
                 "type": "REPEAT",
                 "content": {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "PATTERN",
-                      "value": "[^}]+"
-                    },
-                    {
-                      "type": "STRING",
-                      "value": "}"
-                    }
-                  ]
+                  "type": "PATTERN",
+                  "value": "."
                 }
               },
               "named": true,
@@ -146,17 +128,8 @@
               "content": {
                 "type": "REPEAT",
                 "content": {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "PATTERN",
-                      "value": "[^}]+"
-                    },
-                    {
-                      "type": "STRING",
-                      "value": "}"
-                    }
-                  ]
+                  "type": "PATTERN",
+                  "value": "."
                 }
               },
               "named": true,
@@ -182,17 +155,8 @@
           "content": {
             "type": "REPEAT",
             "content": {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "PATTERN",
-                  "value": "[^#]+"
-                },
-                {
-                  "type": "STRING",
-                  "value": "#"
-                }
-              ]
+              "type": "PATTERN",
+              "value": "."
             }
           },
           "named": true,

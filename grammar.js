@@ -17,16 +17,15 @@ module.exports = grammar({
 
     nelt_tags: ($) => choice($.nelt_expr, $.nelt_val),
 
-    nelt_expr: ($) =>
-      seq("{%", alias(repeat(choice(/[^%]+/, "%")), $.expr), "%}"),
+    nelt_expr: ($) => seq("{%", alias(repeat(/./), $.expr), "%}"),
 
     nelt_val: ($) =>
       choice(
-        seq("{{", alias(repeat(choice(/[^}]+/, "}")), $.val), "}}"),
-        seq("{{-", alias(repeat(choice(/[^}]+/, "}")), $.val), "}}"),
+        seq("{{", alias(repeat(/./), $.val), "}}"),
+        seq("{{-", alias(repeat(/./), $.val), "}}"),
       ),
 
     nelt_comment: ($) =>
-      seq("{#", alias(repeat(choice(/[^#]+/, "#")), $.nelt_comment_body), "#}"),
+      seq("{#", alias(repeat(/./), $.nelt_comment_body), "#}"),
   },
 });
